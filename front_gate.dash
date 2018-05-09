@@ -1,7 +1,7 @@
 #
 # Main arguments, all optional
 #
-title: Main Panel
+title: Front Gate
 widget_dimensions: [120, 120]
 widget_margins: [5, 5]
 columns: 10
@@ -10,6 +10,5 @@ columns: 10
 #
 layout:
     - include: top_panel
-    - include: main_middle_panel
-    - include: house_mode_panel
+    - include: front_gate_panel
     - include: nav_panel
