@@ -39,6 +39,31 @@ car_secure:
     icon_style_inactive: "color: green"
     entity: binary_sensor.x5_xdrive30d_door_lock_state
 #bus_time:
+bus_next_1:
+    widget_type: sensor
+    title: "1"
+    entity: sensor.template_next_bus_1
+    value_style: "color: white; font-size: 150%;"
+bus_next_2:
+    widget_type: sensor
+    title: "2"
+    entity: sensor.template_next_bus_2
+bus_next_3:
+    widget_type: sensor
+    title: "3"
+    entity: sensor.template_next_bus_3
+bus_next_4:
+    widget_type: sensor
+    title: "4"
+    entity: sensor.template_next_bus_4
+bus_next_5:
+    widget_type: sensor
+    title: "5"
+    entity: sensor.template_next_bus_5
+bus_next_6:
+    widget_type: sensor
+    title: "6"
+    entity: sensor.template_next_bus_6
 
 label:
     widget_type: label
@@ -56,5 +81,5 @@ car_label:
 layout:
       - label(2x1),sensor.template_gtdarren_home(2x1),sensor.template_gtblythe_home(2x1),sensor.gthome_city(2x1)
       - uber_label(2x1),uberx_time(2x1),uberx_ap_price_est(2x1),sensor.template_uberx_trip_time(2x1)
-      - bus_label(2x1)
+      - bus_label(2x1),bus_next_1,bus_next_2,bus_next_3,bus_next_4,bus_next_5,bus_next_6
       - car_label(2x1),sensor.template_x5_xdrive30d_mileage,sensor.template_x5_xdrive30d_remaining_fuel,sensor.template_x5_xdrive30d_remaining_range_fuel,car_doors,car_windows,car_secure

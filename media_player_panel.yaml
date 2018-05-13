@@ -27,7 +27,7 @@ media_player_bathroom:
     widget_type: media_player
     entity: media_player.bathroom
     truncate_name: 35
-    title: Kitchen
+    title: Bathroom
 
 media_player_ensuite:
     widget_type: media_player
