@@ -131,7 +131,7 @@ media_player_kit:
     widget_type: media_player
     entity: media_player.kitchen
     title: Kitchen Music
-    truncate_name: 10
+    truncate_name: 30
 
 label:
     widget_type: label

@@ -16,7 +16,7 @@ temp_nursery:
     widget_type: sensor
     title: Nursery Temp
     precision: 1
-    entity: sensor.nursery_temperature
+    entity: sensor.template_nursery_temp
 
 solar_prod:
     widget_type: sensor

@@ -41,11 +41,35 @@ travel:
     icon_active: mdi-car-side
     icon_inactive: mdi-car-side
 
+sensors:
+    widget_type: navigate
+    title: Sensors
+    dashboard: "sensors"
+    args:
+      timeout: 60
+      return: main
+      sticky: 1
+    widget_style: "background: grey"
+    icon_active: mdi-access-point
+    icon_inactive: mdi-access-point
+
+cameras:
+    widget_type: navigate
+    title: Cameras
+    dashboard: "cameras"
+    args:
+      timeout: 60
+      return: main
+      sticky: 1
+    widget_style: "background: grey"
+    icon_active: mdi-video
+    icon_inactive: mdi-video
+
 reload:
     widget_type: reload
     title: Reload
     widget_style: "background: grey"
 
 layout:
-    - home,front_gate(2x1),media_players(2x1),travel(2x1),reload
+    - home,front_gate(2x1),media_players,travel,sensors,cameras,reload
 # webcams, upstairs, media/sonos dn/up?, transport
