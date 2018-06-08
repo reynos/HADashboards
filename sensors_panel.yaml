@@ -32,7 +32,7 @@ nursery_light_level:
     entity: sensor.nursery_light_sensor_58
 nursery_humdity:
     widget_type: sensor
-    title: Nursery Light Level
+    title: Nursery Humidity
     precision: 0
     entity: sensor.nursery_humidity_59
 
@@ -48,14 +48,25 @@ kitchen_temp_gauge:
   units: °
 kitchen_humidty:
     widget_type: sensor
-    title: Nursery Humdity
+    title: Kitchen Humdity
     precision: 0
     entity: sensor.kitchen_humidity_62
 kitchen_light_level:
     widget_type: sensor
-    title: Nursery Light Level
+    title: Kitchen Light Level
     precision: 0
     entity: sensor.kitchen_light_sensor_61
+
+dyson_temp_gauge:
+  widget_type: gauge
+  title: Dyson Fan Temp
+  entity: sensor.dyson_temperature
+  min: 16
+  max: 26
+  low_color: 4CFF00
+  med_color: 51FF00
+  high_color: FF0000
+  units: °
 
 front_gate_camera_light:
     widget_type: switch
@@ -70,5 +81,5 @@ front_gate_open:
 layout:
       - label(2x1),nursery_temp_gauge(2x2),nursery_light_level,kitchen_temp_gauge(2x2),kitchen_light_level
       - spacer,spacer,nursery_humdity,kitchen_humidty
-      -
+      - dyson_temp_gauge(2x2)
       - 
