@@ -18,11 +18,38 @@ temp_nursery:
     precision: 1
     entity: sensor.template_nursery_temp
 
+net_power:
+    widget_type: sensor
+    title: Net Power
+    precision: 2
+    entity: sensor.template_sensor_emoncms_net_grid_power
+    icon_on: fa-sun
+
+net_power_gauge:
+  widget_type: gauge
+  title: Net Power
+  title2: kW
+  precision: 1
+  entity: sensor.template_sensor_emoncms_net_grid_power
+  min: -6
+  max: 8
+  low_color: 00FF00
+  med_color: FF9900
+  high_color: FF0000
+  units: ""
+
+house_comsumption:
+    widget_type: sensor
+    title: House Comsuption
+    precision: 2
+    entity: sensor.template_sensor_emoncms_house_consumption
+    icon_on: fa-sun
+
 solar_prod:
     widget_type: sensor
     title: Solar Production
     precision: 2
-    entity: sensor.solar_production
+    entity: sensor.template_sensor_emoncms_solar_production
     icon_on: fa-sun
 
 front_door:
@@ -51,4 +78,4 @@ blythe_presence:
     icon_style_active: "color: #ea4b82"
 
 layout:
-    - clock(2x1), temp_kit, temp_nursery, solar_prod, front_door, darren_presence, blythe_presence
+    - clock(2x1),temp_kit,temp_nursery,solar_prod,house_comsumption,net_power_gauge,front_door,darren_presence,blythe_presence

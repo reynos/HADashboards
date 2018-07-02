@@ -43,4 +43,4 @@ house_mode_holiday:
     script: "script.holiday"
 
 layout:
-      - house_mode_day(2x1),house_mode_evening(2x1),house_mode_bedtime(2x1),house_mode_night,house_mode_holiday
+      - house_mode_day(2x1),house_mode_evening(2x1),house_mode_bedtime(2x1),house_mode_night(2x1),house_mode_holiday(2x1)

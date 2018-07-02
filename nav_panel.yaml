@@ -71,5 +71,5 @@ reload:
     widget_style: "background: grey"
 
 layout:
-    - home,front_gate(2x1),media_players,travel,sensors,cameras,reload
+    - home,front_gate(2x1),media_players(2x1),sensors(2x1),travel,cameras,reload
 # webcams, upstairs, media/sonos dn/up?, transport

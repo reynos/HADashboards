@@ -11,11 +11,6 @@ mode:
     text_style: "font-size: 30pt"
     entity: input_select.house_mode
 
-bins:
-    widget_type: sensor
-    title: Wed Bins
-    entity: sensor.template_calendar_bin_nights
-
 temp:
     widget_type: sensor
     title: Kitchen Temp
@@ -98,6 +93,11 @@ front_porch_light:
     icon_on: mdi-lightbulb-on
     icon_off: mdi-lightbulb-outline
 
+bins:
+    widget_type: sensor
+    title: Wed Bins
+    entity: sensor.template_calendar_bin_nights
+
 study_lamp:
     widget_type: light
     entity: light.study_lamp_18
@@ -115,7 +115,7 @@ darren_bedside_lamp:
 master_bed_light:
     widget_type: light
     entity: light.master_bedroom_23
-    title: Front Porch Light
+    title: Master Bed Light
     icon_on: mdi-lightbulb-on
     icon_off: mdi-lightbulb-outline
 
@@ -125,7 +125,7 @@ light_level:
     units: "lux"
     precision: 0
     shorten: 1
-    entity: sensor.light_sensor_61
+    entity: sensor.kitchen_light_sensor_61
 
 media_player_kit:
     widget_type: media_player
@@ -138,8 +138,8 @@ label:
     text: Main
 
 layout:
-      - label(2x1),lounge_lamp,kit_bench_light,stairs_light,front_garden_light,back_garden_light,back_fairy_light
-      - weather(2x2),kit_high_light,kit_low_light,lounge_light,tv_light,media_player_kit(2x2)
+      - label(2x1),lounge_lamp,kit_bench_light,stairs_light,front_garden_light,back_garden_light,back_fairy_light,media_player_kit(2x2)
+      - weather(2x2),kit_high_light,kit_low_light,lounge_light,tv_light,light_level,bins
       - study_lamp,darren_bedside_lamp,master_bed_light,front_porch_light
 #      - ,,,,,,,,,,,light_level(2x1)
 #      - ,,,,,,,,,,

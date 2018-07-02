@@ -68,6 +68,19 @@ dyson_temp_gauge:
   high_color: FF0000
   units: °
 
+net_power_gauge:
+  widget_type: gauge
+  title: Net Power
+  title2: kW
+  precision: 1
+  entity: sensor.template_sensor_emoncms_net_grid_power
+  min: -4
+  max: 6
+  low_color: 00FF00
+  med_color: FF9900
+  high_color: FF0000
+  units: ""
+
 front_gate_camera_light:
     widget_type: switch
     title: Night Vision
@@ -81,5 +94,5 @@ front_gate_open:
 layout:
       - label(2x1),nursery_temp_gauge(2x2),nursery_light_level,kitchen_temp_gauge(2x2),kitchen_light_level
       - spacer,spacer,nursery_humdity,kitchen_humidty
-      - dyson_temp_gauge(2x2)
-      - 
+      - dyson_temp_gauge(2x2),net_power_gauge(2x2)
+      -
