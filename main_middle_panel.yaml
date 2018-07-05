@@ -125,7 +125,7 @@ light_level:
     units: "lux"
     precision: 0
     shorten: 1
-    entity: sensor.kitchen_light_sensor_61
+    entity: sensor.light_sensor_79
 
 media_player_kit:
     widget_type: media_player
