@@ -7,7 +7,7 @@ label:
 
 kitchen_temp_radial:
   widget_type: radial
-  entity: sensor.template_nursery_temp
+  entity: sensor.kitchen_temperature
   settings:
     title: Nursery Temp
     minValue: 10
@@ -18,44 +18,73 @@ kitchen_temp_radial:
 nursery_temp_gauge:
   widget_type: gauge
   title: Nursery Temp
-  entity: sensor.template_nursery_temp
+  entity: sensor.nursery_temperature
   min: 16
   max: 26
   low_color: 4CFF00
   med_color: 51FF00
   high_color: FF0000
   units: °
+
 nursery_light_level:
     widget_type: sensor
     title: Nursery Light Level
     precision: 0
-    entity: sensor.nursery_light_sensor_58
+    entity: sensor.nursery_luminance
+
 nursery_humdity:
     widget_type: sensor
     title: Nursery Humidity
     precision: 0
-    entity: sensor.nursery_humidity_59
+    entity: sensor.nursery_relative_humidity
+
+bins:
+    widget_type: sensor
+    title: Wed Bins
+    entity: sensor.template_calendar_bin_nights
 
 kitchen_temp_gauge:
   widget_type: gauge
   title: Kitchen Temp
-  entity: sensor.template_kitchen_temp
+  entity: sensor.kitchen_temperature
   min: 10
   max: 35
   low_color: 4CFF00
   med_color: 51FF00
   high_color: FF0000
   units: °
+
+outside_temp_gauge:
+  widget_type: gauge
+  title: Kitchen Temp
+  entity: sensor.kitchen_temperature
+  min: 10
+  max: 35
+  low_color: 4CFF00
+  med_color: 51FF00
+  high_color: FF0000
+  units: °
+
 kitchen_humidty:
     widget_type: sensor
     title: Kitchen Humdity
     precision: 0
-    entity: sensor.kitchen_humidity_62
+    entity: sensor.kitchen_relative_humidity
+
 kitchen_light_level:
     widget_type: sensor
     title: Kitchen Light Level
     precision: 0
-    entity: sensor.kitchen_light_sensor_61
+    entity: sensor.kitchen_luminance
+
+front_door:
+    widget_type: binary_sensor
+    title: Front Door
+    entity: binary_sensor.front_door_65
+    icon_on: mdi-door-open
+    icon_style_active: "color: red"
+    icon_off: mdi-door-closed
+    icon_style_inactive: "color: green"
 
 dyson_temp_gauge:
   widget_type: gauge
@@ -74,25 +103,22 @@ net_power_gauge:
   title2: kW
   precision: 1
   entity: sensor.template_sensor_emoncms_net_grid_power
-  min: -4
-  max: 6
+  min: -6
+  max: 8
   low_color: 00FF00
   med_color: FF9900
   high_color: FF0000
   units: ""
 
-front_gate_camera_light:
-    widget_type: switch
-    title: Night Vision
-    entity: switch.light_on
-
-front_gate_open:
-    widget_type: switch
-    title: Open Gate
-    entity: switch.open_door
+ensuite_fan:
+    widget_type: light
+    entity: switch.ensuite_fan_switch
+    title: Ensuite Fan
+    icon_on: mdi-fan
+    icon_off: mdi-fan-off
 
 layout:
       - label(2x1),nursery_temp_gauge(2x2),nursery_light_level,kitchen_temp_gauge(2x2),kitchen_light_level
-      - spacer,spacer,nursery_humdity,kitchen_humidty
-      - dyson_temp_gauge(2x2),net_power_gauge(2x2)
+      - bins,ensuite_fan,nursery_humdity,kitchen_humidty
+      -
       -

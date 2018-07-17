@@ -11,121 +11,145 @@ mode:
     text_style: "font-size: 30pt"
     entity: input_select.house_mode
 
-temp:
-    widget_type: sensor
-    title: Kitchen Temp
-    entity: sensor.template_kitchen_temp
-
 kit_high_light:
     widget_type: light
-    entity: light.kitchen_high_15
+    entity: light.kitchen_high_level
     title: Kitchen High
     icon_on: mdi-lightbulb-on
     icon_off: mdi-lightbulb-outline
 
 kit_low_light:
     widget_type: light
-    entity: light.kitchen_low_13
+    entity: light.kitchen_low_level
     title: Kitchen Low
     icon_on: mdi-lightbulb-on
     icon_off: mdi-lightbulb-outline
 
 kit_bench_light:
     widget_type: light
-    entity: light.kitchen_bench_7
+    entity: switch.kitchen_bench_switch
     title: Kitchen Bench
     icon_on: mdi-lightbulb-on
     icon_off: mdi-lightbulb-outline
 
 lounge_light:
     widget_type: light
-    entity: light.lounge_6
+    entity: light.lounge_level
     title: Lounge
     icon_on: mdi-lightbulb-on
     icon_off: mdi-lightbulb-outline
 
 lounge_lamp:
     widget_type: light
-    entity: light.lounge_lamp_3
+    entity: light.lounge_lamp_level
     title: Lounge Lamp
     icon_on: mdi-lightbulb-on
     icon_off: mdi-lightbulb-outline
 
 stairs_light:
     widget_type: light
-    entity: light.stairs_16
+    entity: switch.stairs_switch
     title: Stairs
+    icon_on: mdi-lightbulb-on
+    icon_off: mdi-lightbulb-outline
+
+hall_light:
+    widget_type: light
+    entity: light.hall_level
+    title: Hall
+    icon_on: mdi-lightbulb-on
+    icon_off: mdi-lightbulb-outline
+
+laundry_light:
+    widget_type: light
+    entity: light.laundry_level
+    title: Laundry
+    icon_on: mdi-lightbulb-on
+    icon_off: mdi-lightbulb-outline
+
+side_of_house_light:
+    widget_type: light
+    entity: switch.side_of_house_switch
+    title: Side of House
     icon_on: mdi-lightbulb-on
     icon_off: mdi-lightbulb-outline
 
 front_garden_light:
     widget_type: light
-    entity: light.front_garden_28
+    entity: switch.front_garden_1_switch
     title: Front Garden
     icon_on: mdi-lightbulb-on
     icon_off: mdi-lightbulb-outline
 
 back_garden_light:
     widget_type: light
-    entity: light.backyard_24
+    entity: switch.backyard_switch
+    title: Back Garden
+    icon_on: mdi-lightbulb-on
+    icon_off: mdi-lightbulb-outline
+
+back_floods:
+    widget_type: light
+    entity: switch.back_floods_switch
     title: Back Garden
     icon_on: mdi-lightbulb-on
     icon_off: mdi-lightbulb-outline
 
 back_fairy_light:
     widget_type: light
-    entity: light.backyard_fairy_light_22
+    entity: light.backyard_fairylights_level
     title: Back Fairylights
     icon_on: mdi-lightbulb-on
     icon_off: mdi-lightbulb-outline
 
 tv_light:
     widget_type: light
-    entity: light.tv_4
+    entity: light.tv_level
     title: TV Light
     icon_on: mdi-lightbulb-on
     icon_off: mdi-lightbulb-outline
 
 front_porch_light:
     widget_type: light
-    entity: light.front_porch_21
+    entity: switch.front_porch_switch
     title: Front Porch Light
     icon_on: mdi-lightbulb-on
     icon_off: mdi-lightbulb-outline
 
-bins:
-    widget_type: sensor
-    title: Wed Bins
-    entity: sensor.template_calendar_bin_nights
-
 study_lamp:
     widget_type: light
-    entity: light.study_lamp_18
+    entity: switch.study_lamp_switch
     title: Study Lamp
+    icon_on: mdi-lightbulb-on
+    icon_off: mdi-lightbulb-outline
+
+study_light:
+    widget_type: light
+    entity: light.study_level
+    title: Study Light
     icon_on: mdi-lightbulb-on
     icon_off: mdi-lightbulb-outline
 
 darren_bedside_lamp:
     widget_type: light
-    entity: light.bedside_darren_17
+    entity: switch.darren_bedside_switch
     title: Darren Bedside
     icon_on: mdi-lightbulb-on
     icon_off: mdi-lightbulb-outline
 
 master_bed_light:
     widget_type: light
-    entity: light.master_bedroom_23
-    title: Master Bed Light
+    entity: light.master_bedroom_level
+    title: Master Bedroom
     icon_on: mdi-lightbulb-on
     icon_off: mdi-lightbulb-outline
 
-light_level:
-    widget_type: sensor
-    title: Light Level
-    units: "lux"
-    precision: 0
-    shorten: 1
-    entity: sensor.light_sensor_79
+front_bed_light:
+    widget_type: light
+    entity: light.front_bedroom_level
+    title: Front Bedroom
+    icon_on: mdi-lightbulb-on
+    icon_off: mdi-lightbulb-outline
 
 media_player_kit:
     widget_type: media_player
@@ -139,7 +163,7 @@ label:
 
 layout:
       - label(2x1),lounge_lamp,kit_bench_light,stairs_light,front_garden_light,back_garden_light,back_fairy_light,media_player_kit(2x2)
-      - weather(2x2),kit_high_light,kit_low_light,lounge_light,tv_light,light_level,bins
-      - study_lamp,darren_bedside_lamp,master_bed_light,front_porch_light
+      - weather(2x2),kit_high_light,kit_low_light,lounge_light,tv_light,back_floods,side_of_house_light
+      - study_light,study_lamp,master_bed_light,darren_bedside_lamp,front_bed_light,hall_light,laundry_light,front_porch_light
 #      - ,,,,,,,,,,,light_level(2x1)
 #      - ,,,,,,,,,,

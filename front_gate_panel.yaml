@@ -21,12 +21,12 @@ front_gate_camera:
 front_gate_camera_light:
     widget_type: switch
     title: Night Vision
-    entity: switch.light_on
+    entity: switch.front_gate_light_on
 
 front_gate_open:
     widget_type: switch
     title: Open Gate
-    entity: switch.open_door
+    entity: switch.front_gate_open_door
 
 layout:
       - label(2x1),front_gate_camera(4x4)
