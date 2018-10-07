@@ -91,7 +91,7 @@ back_garden_light:
 back_floods:
     widget_type: light
     entity: switch.back_floods_switch
-    title: Back Garden
+    title: Back Flood
     icon_on: mdi-lightbulb-on
     icon_off: mdi-lightbulb-outline
 
