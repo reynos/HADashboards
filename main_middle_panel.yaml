@@ -103,11 +103,13 @@ back_fairy_light:
     icon_off: mdi-lightbulb-outline
 
 front_door_sensor:
-    widget_type: light
+    widget_type: binary_sensor
     entity: binary_sensor.front_door_sensor
     title: Front Door
     icon_on: mdi-door-open
     icon_off: mdi-door-closed
+    icon_style_active: "color: red"
+    icon_style_inactive: "color: green"
 
 tv_light:
     widget_type: light
